@@ -194,7 +194,7 @@ public class BootstrapUtils {
   /**
    * This method links the {@link Injector} to the {@link ServiceLocator}.
    */
-  private static void link(ServiceLocator locator, Injector injector, Set<? extends GuiceBinding<?>> bindings) {
+  public static void link(ServiceLocator locator, Injector injector, Set<? extends GuiceBinding<?>> bindings) {
     DynamicConfigurationService dcs = locator.getService(DynamicConfigurationService.class);
     DynamicConfiguration dc = dcs.createDynamicConfiguration();
     

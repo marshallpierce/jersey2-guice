@@ -43,13 +43,13 @@ public class GuiceBinding<T> {
   /**
    * @see #bind(Binder, Key)
    */
-  private static final TypeLiteral<GuiceBinding<?>> TYPE = new TypeLiteral<GuiceBinding<?>>(){};
+  public static final TypeLiteral<GuiceBinding<?>> TYPE = new TypeLiteral<GuiceBinding<?>>(){};
   
   /**
    * @see #bind(Binder, Key)
    */
-  private static final Named NAME = Names.named("GuiceBinding.NAME");
-  
+  public static final Named NAME = Names.named("GuiceBinding.NAME");
+
   /**
    * The {@link Key} of the {@link Multibinder} {@link Set}.
    * 
@@ -85,7 +85,7 @@ public class GuiceBinding<T> {
    * 
    * @see GuiceBinding#bind(Binder, Key)
    */
-  static final AbstractModule INJECTOR = new AbstractModule() {
+  public static final AbstractModule INJECTOR = new AbstractModule() {
     @Override
     protected void configure() {
       GuiceBinding.bind(binder(), Injector.class);

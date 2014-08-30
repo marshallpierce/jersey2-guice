@@ -48,7 +48,7 @@ import com.google.inject.servlet.RequestScoped;
  * {@link SecurityContext}
  * {@link Request}
  */
-class JerseyToGuiceModule extends AbstractModule {
+public class JerseyToGuiceModule extends AbstractModule {
 
   private final ServiceLocator locator;
   
